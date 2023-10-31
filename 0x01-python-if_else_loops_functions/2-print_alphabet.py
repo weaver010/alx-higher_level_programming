@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for char in range(97, 123):
-    print(f"{char:c}",end="")
+for i in range(97, 123):
+    print(f"{i:c}",end="")
