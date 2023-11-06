@@ -3,7 +3,7 @@
 /**
  * print_python_list_info - print
  * @p:p
- * Return: 0
+ * Return:void
  */
 void print_python_list_info(PyObject *p)
 {
