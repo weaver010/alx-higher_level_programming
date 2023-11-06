@@ -10,7 +10,7 @@ int chpalindrome(listint_t **h, listint_t *a)
 int r;
 if (a != NULL)
 {
-r = palindrome(h, a->next);
+r = chpalindrome(h, a->next);
 if (r != 0)
 {
 r = (a->n == (*h)->n);
@@ -34,4 +34,4 @@ if (head == NULL)
 return (0);
 }
 return (chpalindrome(head, *head));
-}}
+}
