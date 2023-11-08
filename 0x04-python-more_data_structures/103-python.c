@@ -1,4 +1,3 @@
-#define _GNU_SOURCE
 #include <Python.h>
 #include <object.h>
 #include <listobject.h>
