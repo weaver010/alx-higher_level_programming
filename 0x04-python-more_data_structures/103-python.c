@@ -1,10 +1,11 @@
+#define _GNU_SOURCE
 #include <Python.h>
 #include <object.h>
 #include <listobject.h>
 #include <bytesobject.h>
 void print_python_bytes(PyObject *p)
 {
-int l;
+long int l;
 int i;
 char *s= NULL;
 printf("[.] bytes object info\n");
@@ -32,7 +33,7 @@ printf("\n");
 }
 void print_python_list(PyObject *p)
 {
-int l = PyList_Size(p);
+long int l = PyList_Size(p);
 int i;
 PyListObject *s = (PyListObject *)p;
 const char *t;
