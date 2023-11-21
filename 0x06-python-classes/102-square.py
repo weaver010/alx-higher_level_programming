@@ -19,7 +19,7 @@ class Square:
     @property
     def size(self):
         """
-        Returns: size 
+        Returns: size
         """
         return self.__size
 
@@ -27,7 +27,7 @@ class Square:
     def size(self, value):
         """
         Args:
-            value : size 
+            value : size
 
         Returns: None
         """
@@ -41,7 +41,7 @@ class Square:
 
     def area(self):
         """
-        Returns: The area 
+        Returns: The area
         """
         return (self.__size) * (self.__size)
 
@@ -66,7 +66,6 @@ class Square:
         """
         Args:
             other : square
-            
         Returns : True or False
         """
         return self.size == other.size
@@ -74,7 +73,7 @@ class Square:
     def __ne__(self, other):
         """
         Args:
-            other : square 
+            other : square
 
         Returns: True or False
         """
@@ -83,7 +82,7 @@ class Square:
     def __ge__(self, other):
         """
         Args:
-            other : square 
+            other : square
 
         Returns: True or False
         """
