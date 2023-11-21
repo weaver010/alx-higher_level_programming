@@ -47,7 +47,7 @@ class Node:
 
 
         """
-        if value != None and not isinstance(value, Node):
+        if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
@@ -64,15 +64,13 @@ class SinglyLinkedList:
         """
         self.__head = None
 
-
-
     def sorted_insert(self, value):
         """
         Args:
             value: value.
         """
-        n= Node(value)
-        if self.__head == None:
+        n = Node(value)
+        if self.__head is None:
             n.next_node = None
             self.__head = n
         elif self.__head.data > value:
@@ -80,7 +78,7 @@ class SinglyLinkedList:
             self.__head = n
         else:
             t = self.__head
-            while (t.next_node != None and
+            while (t.next_node is not None and
                    t.next_node.data < value):
                 t = t.next_node
             n.next_node = t.next_node
