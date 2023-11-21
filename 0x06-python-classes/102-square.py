@@ -45,7 +45,7 @@ class Square:
         """
         return (self.__size) * (self.__size)
 
-    def __less__(self, other):
+    def __lt__(self, other):
         """
         Args:
             other : square
@@ -53,7 +53,7 @@ class Square:
         """
         return self.size < other.size
 
-    def __leseq__(self, other):
+    def __le__(self, other):
         """
         Args:
             other : square
@@ -62,7 +62,7 @@ class Square:
         """
         return self.size <= other.size
 
-    def __eqal__(self, other):
+    def __eq__(self, other):
         """
         Args:
             other : square
@@ -71,7 +71,7 @@ class Square:
         """
         return self.size == other.size
 
-    def __noteqal__(self, other):
+    def __ne__(self, other):
         """
         Args:
             other : square 
@@ -80,7 +80,7 @@ class Square:
         """
         return self.size != other.size
 
-    def __greatoeq__(self, other):
+    def __ge__(self, other):
         """
         Args:
             other : square 
@@ -89,7 +89,7 @@ class Square:
         """
         return self.size >= other.size
 
-    def __great__(self, other):
+    def __gt__(self, other):
         """
         Args:
             other : square
