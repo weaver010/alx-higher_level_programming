@@ -4,14 +4,13 @@
 
 
 class Rectangle:
-     """Defines  rectangle.
+    """Defines  rectangle
     """
-
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-         """
+        """
         Args:
            width,height
         """
@@ -39,7 +38,7 @@ class Rectangle:
 
     @property
     def height(self):
-         """
+        """
         Return:height
         """
         return self.__height
@@ -56,13 +55,13 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-         """
+        """
         Return:area
         """
         return (self.__width * self.__height)
 
     def perimeter(self):
-       """
+        """
         Return:perimeter
         """
         if self.__width == 0 or self.__height == 0:
@@ -70,7 +69,7 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-       """Return str"""
+        """Return str"""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
@@ -82,13 +81,13 @@ class Rectangle:
         return ("".join(sstr))
 
     def __repr__(self):
-       """Return a string
+        """Return a string
         """
         sstr = "Rectangle(" + str(self.__width)
         sstr += ", " + str(self.__height) + ")"
         return (sstr)
 
     def __del__(self):
-         """Print Bye ..."""
+        """Print Bye ..."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
