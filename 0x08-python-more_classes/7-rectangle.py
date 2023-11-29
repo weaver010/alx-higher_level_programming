@@ -8,15 +8,15 @@ class Rectangle:
     """Defines  rectangle.
     """
 
-    number_of_inst = 0
-    print_window = "#"
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
         Args:
            width,height
         """
-        Rectangle.number_of_inst += 1
+        Rectangle.number_of_instances += 1
         self.__width = width
         self.__height = height
 
@@ -27,7 +27,7 @@ class Rectangle:
         sstr = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                sstr += str(self.print_window)
+                sstr += str(self.print_symbol)
             sstr += "\n"
         return sstr[:-1]
 
@@ -38,7 +38,7 @@ class Rectangle:
 
     def __del__(self):
         """Print Bye ..."""
-        Rectangle.n_of_inst -= 1
+        Rectangle.n_of_instances -= 1
         print("Bye rectangle...")
 
     @property
