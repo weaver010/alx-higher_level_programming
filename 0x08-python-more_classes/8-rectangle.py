@@ -73,7 +73,7 @@ class Rectangle:
     def bigger_or_equal(rect_1, rect_2):
         """
         Arg:
-            rect_1,rect_2 
+            rect_1,rect_2
         Raise: TypeError
         """
         if not isinstance(rect_1, Rectangle):
@@ -104,6 +104,6 @@ class Rectangle:
         return (sstr)
 
     def __del__(self):
-         """Print Bye ..."""
+        """Print Bye ..."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
