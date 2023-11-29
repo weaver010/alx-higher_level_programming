@@ -1,45 +1,23 @@
 #!/usr/bin/python3
-
 """Rectangle Class.
 """
 
 
 class Rectangle:
-    """Defines  rectangle.
+     """Defines  rectangle.
     """
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """
+         """
         Args:
            width,height
         """
-        Rectangle.number_of_instances += 1
-        self.__width = width
-        self.__height = height
-
-    def __str__(self):
-        """Return str"""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        sstr = ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                sstr += str(self.print_symbol)
-            sstr += "\n"
-        return sstr[:-1]
-
-    def __repr__(self):
-        """Return a string
-        """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """Print Bye ..."""
-        Rectangle.n_of_instances -= 1
-        print("Bye rectangle...")
+        type(self).number_of_instances += 1
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -61,7 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """
+         """
         Return:height
         """
         return self.__height
@@ -78,16 +56,39 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """
+         """
         Return:area
         """
-        return self.__width * self.__height
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        """
+       """
         Return:perimeter
         """
-        if self.width == 0 or self.height == 0:
-            return 0
-        else:
-            return 2 * (self.__width + self.__height)
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+       """Return str"""
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        sstr = []
+        for i in range(self.__height):
+            [sstr.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                sstr.append("\n")
+        return ("".join(sstr))
+
+    def __repr__(self):
+       """Return a string
+        """
+        sstr = "Rectangle(" + str(self.__width)
+        sstr += ", " + str(self.__height) + ")"
+        return (sstr)
+
+    def __del__(self):
+         """Print Bye ..."""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
