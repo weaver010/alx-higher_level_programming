@@ -18,7 +18,6 @@ class Rectangle:
         """
         self.__height = height
         self.__width = width
-       
 
     def __str__(self):
         """
@@ -36,7 +35,7 @@ class Rectangle:
     @property
     def width(self):
         """
-        Returns:width 
+        Returns:width
         """
         return self.__width
 
@@ -54,7 +53,7 @@ class Rectangle:
     @property
     def height(self):
         """
-        Returns:height 
+        Returns:height
         """
         return self.__height
 
