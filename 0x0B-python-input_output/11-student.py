@@ -8,7 +8,7 @@ class Student:
     """
     def __init__(self, first_name, last_name, age):
         """
-	Args:
+        Args:
             first_name : first name
             last_name : last name
             age : age
@@ -31,6 +31,7 @@ class Student:
             except Exception:
                 pass
         return d
+
     def reload_from_json(self, json):
         """
         Args:
