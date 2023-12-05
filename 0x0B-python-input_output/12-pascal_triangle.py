@@ -7,13 +7,11 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
+    if n == 1:
+        return [[1]]
 
-    t = [[1]]
-    while len(t) != n:
-        s = t[-1]
-        o = [1]
-        for i in range(len(s) - 1):
-            o.append(tri[i] + s[i + 1])
-        o.append(1)
-        t.append(o)
-    return t
+    s = [[1]]
+    for i in range(n - 1):
+        s.append([x + n for x, n in zip(
+                                        s[-1] + [0], [0] + s[-1])])
+    return (s)
