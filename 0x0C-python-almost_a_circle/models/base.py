@@ -17,7 +17,7 @@ class Base:
         Args:
             id
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -115,8 +115,7 @@ class Base:
                 else:
                     fieldnames = ["id", "size", "x", "y"]
                 w = csv.DictReader(r, fieldnames=d)
-                w = [dict([k, int(v)] for k, v in d.items())
-                              for d in w]
+                w = [dict([k, int(v)] for k, v in d.items()) for d in w]
                 return [cls.create(**d) for d in w]
         except IOError:
             return []
