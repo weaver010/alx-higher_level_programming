@@ -1,9 +1,8 @@
--- script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter.
+-- script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
 SELECT g.name AS name
-FROM tv_shows e INNER JOIN tv_show_genres es
-ON e.id = es.show_id
-INNER JOIN tv_genres AS b
-ON es.genre_id = b.id
-WHERE e.title = 'Dexter'
-ORDER BY b.name;
-
+FROM tv_shows s INNER JOIN tv_show_genres sg
+ON s.id = sg.show_id
+INNER JOIN tv_genres g
+ON sg.genre_id = g.id
+WHERE s.title = 'Dexter'
+ORDER BY g.name;
