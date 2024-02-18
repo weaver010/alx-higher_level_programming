@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(s)
 
     c = Session(s)
-    for i in c.query(i).filter(State.name.like('%a%')):
+    for i in c.query(State).filter(State.name.like('%a%')):
         c.delete(i)
     c.commit()
     c.close()
