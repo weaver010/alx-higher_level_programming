@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script that changes the name of a State object
+"""script that changes the name of a State object
  from the database hbtn_0e_6_usa"""
 
 if __name__ == "__main__":
@@ -15,9 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(s)
 
     c = Session(s)
-    n = State(name='Louisiana')
-    c.add(n)
-    n_s = c.query(State).filter(State.name == 'Louisiana').first()
+    t = c.query(State).filter(State.id == 2).first()
+    t.name = 'New Mexico'
     c.commit()
-    print("{}".format(n_s.id))
     c.close()
