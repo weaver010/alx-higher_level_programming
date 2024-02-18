@@ -15,7 +15,7 @@ if __name__ == "__main__":
     c = Session(s)
     t = c.query(State).order_by(State.id).first()
     if t:
-        print("{}: {}".format(first.id, first.name))
+        print("{}: {}".format(t.id, t.name))
     else:
         print("Nothing")
     c.close()
