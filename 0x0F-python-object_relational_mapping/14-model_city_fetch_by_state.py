@@ -16,6 +16,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(s)
 
     c = Session(s)
-    for i, j in session.query(State, City).filter(City.state_id == State.id).order_by(City.id).all():
-            print("{}: ({}) {}".format(i.name, j.id, j.name))
+    for i, j in session.query(State, City).filter(
+            City.state_id == State.id).order_by(City.id).all():
+        print("{}: ({}) {}".format(i.name, j.id, j.name))
     c.close()
